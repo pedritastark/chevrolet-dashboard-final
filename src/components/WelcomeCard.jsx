@@ -29,6 +29,7 @@ const WelcomeCard = ({ userName, totalSales, totalObjective }) => {
       shadow="md"
       borderWidth="1px"
       h="100%"
+      minH="400px"
     >
       {/* Saludo */}
       <VStack align="start" spacing={0}>
@@ -41,7 +42,7 @@ const WelcomeCard = ({ userName, totalSales, totalObjective }) => {
       </VStack>
 
       {/* Métrica Principal - Reemplazada por el indicador circular */}
-      <Box my={4}>
+      <Box my={7}>
         <ProgressCircleIndicator value={totalSales} maxValue={totalObjective} />
       </Box>
       

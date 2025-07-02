@@ -29,8 +29,8 @@ const Header = () => {
       <HStack as={Link} to="/" spacing={3} _hover={{ textDecoration: 'none' }}>
         <SunIcon w={6} h={6} color="green.500" />
         <Heading as="h1" size="md" color="green.500" fontWeight="bold">
-        <span style={{ color: 'black' }}>Chevy</span>
-          <span style={{ color: '#38A169' }}>Sales</span>
+        <span style={{ color: 'black' }}>Ana-</span>
+          <span style={{ color: '#38A169' }}>lytics</span>
 
         </Heading>
       </HStack>

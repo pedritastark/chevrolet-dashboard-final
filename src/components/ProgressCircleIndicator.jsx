@@ -13,7 +13,7 @@ const ProgressCircleIndicator = ({ value, maxValue }) => {
         value={progressPercentage}
         color='green.400'       // 2. Color de progreso verde
         trackColor='gray.200'  // Color de fondo de la barra
-        size='110px'
+        size='160'
         thickness='12px'
         capIsRound             // 3. Bordes de la barra redondeados
       >
