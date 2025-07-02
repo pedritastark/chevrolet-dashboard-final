@@ -6,7 +6,9 @@ import {
   Table, Thead, Tbody, Tr, Th, Td, Image, IconButton, Tooltip
 } from '@chakra-ui/react';
 import { SearchIcon, DownloadIcon, ViewIcon } from '@chakra-ui/icons';
-import { marketingAssets, uniqueCategories, uniqueModels } from '../data/MarketingAssets.js';
+// --- LÍNEA CORREGIDA ---
+// Asegúrate de que el nombre del archivo coincida exactamente (con 'm' minúscula)
+import { marketingAssets, uniqueCategories, uniqueModels } from '../data/marketingAssets.js';
 import { FiUpload } from 'react-icons/fi';
 
 const MarketingResources = () => {
@@ -14,7 +16,6 @@ const MarketingResources = () => {
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [modelFilter, setModelFilter] = useState('all');
 
-  // Lógica de filtrado
   const filteredAssets = useMemo(() => {
     return marketingAssets.filter(asset => {
       const matchesSearch = asset.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -28,7 +29,6 @@ const MarketingResources = () => {
     <Box p={6}>
       <Heading as="h1" size="xl" mb={6}>Recursos de Marketing</Heading>
 
-      {/* Barra de Filtros y Acciones */}
       <HStack spacing={4} mb={6}>
         <InputGroup>
           <InputLeftElement pointerEvents="none" children={<SearchIcon color="gray.300" />} />
@@ -46,10 +46,11 @@ const MarketingResources = () => {
           <option value="all">Todos los modelos</option>
           {uniqueModels.map(mod => <option key={mod} value={mod}>{mod}</option>)}
         </Select>
-            <IconButton icon={<FiUpload />} colorScheme="green" aria-label="Subir Activo" />      
-        </HStack>
-
-      {/* Tabla de Activos */}
+        <Tooltip label="Subir Activo" hasArrow>
+          <IconButton icon={<FiUpload />} colorScheme="green" aria-label="Subir Activo" />
+        </Tooltip>
+      </HStack>
+      
       <Box bg="white" borderRadius="lg" shadow="md" borderWidth="1px">
         <Table variant="simple">
           <Thead>
