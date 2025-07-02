@@ -7,8 +7,8 @@ import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
   { label: 'Dashboard', path: '/' },
-  { label: 'Documentos', path: '/documents' },
-  { label: 'Reporte de Ventas', path: '/retail-report' },
+  { label: 'Recursos', path: '/recursos' },
+  { label: 'Análisis', path: '/analisis' },
 ];
 
 const Header = () => {

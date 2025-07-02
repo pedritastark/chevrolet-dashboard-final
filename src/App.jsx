@@ -5,11 +5,8 @@ import { Box } from '@chakra-ui/react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Dashboard from './screens/Dashboard.jsx';
-import RetailReport from './screens/RetailReport.jsx';
-
-
-// Placeholders para las otras pantallas (puedes crear estos archivos después)
-const Documents = () => <Box p={10}>Pantalla de Documentos</Box>;
+import MarketingResources from './screens/MarketingResources.jsx';
+import PerformanceAnalysis from './screens/PerformanceAnalysis.jsx'; // <-- 1. Importa la nueva pantalla
 
 function App() {
   return (
@@ -19,8 +16,9 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/documents" element={<Documents />} />
-            <Route path="/retail-report" element={<RetailReport />} />
+            <Route path="/recursos" element={<MarketingResources />} />
+            {/* 2. Actualiza la ruta aquí */}
+            <Route path="/analisis" element={<PerformanceAnalysis />} />
           </Routes>
         </main>
       </Box>
