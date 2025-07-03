@@ -6,7 +6,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Dashboard from './screens/Dashboard.jsx';
 import MarketingResources from './screens/MarketingResources.jsx';
-import PerformanceAnalysis from './screens/PerformanceAnalysis.jsx'; // <-- 1. Importa la nueva pantalla
+import PerformanceAnalysis from './screens/PerformanceAnalysis.jsx';
+import AiChat from './screens/AiChat.jsx'; // <-- 1. Importa la nueva pantalla de chat
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/recursos" element={<MarketingResources />} />
-            {/* 2. Actualiza la ruta aquí */}
             <Route path="/analisis" element={<PerformanceAnalysis />} />
+            <Route path="/chat" element={<AiChat />} /> {/* <-- 2. Añade la nueva ruta */}
           </Routes>
         </main>
       </Box>
